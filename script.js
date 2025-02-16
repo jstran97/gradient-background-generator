@@ -11,22 +11,22 @@ function randomizeColorSelection() {
 }
 
 function updateInputColorValues(randomColor1, randomColor2) {
-	let input_color1 = document.querySelector(".color1");
-	let input_color2 = document.querySelector(".color2");
+	let inputColor1 = document.querySelector(".color1");
+	let inputColor2 = document.querySelector(".color2");
 
-	input_color1.value = randomColor1;
-	input_color2.value = randomColor2;
+	inputColor1.value = randomColor1;
+	inputColor2.value = randomColor2;
 }
 
 function setGradient() {
 	let body = document.getElementById("gradient");
-	let input_color1 = document.querySelector(".color1");
-	let input_color2 = document.querySelector(".color2");
+	let inputColor1 = document.querySelector(".color1");
+	let inputColor2 = document.querySelector(".color2");
 
 	body.style.background = "linear-gradient(to right, "
-	+ input_color1.value
+	+ inputColor1.value
 	+ ", "
-	+ input_color2.value
+	+ inputColor2.value
 	+ ")";
 
 	printCurrentInputColors(body);
@@ -38,10 +38,10 @@ function printCurrentInputColors(body) {
 }
 
 function initializeUI() {
-	let input_color1 = document.querySelector(".color1");
-	let input_color2 = document.querySelector(".color2");
-	input_color1.addEventListener("input", setGradient);
-	input_color2.addEventListener("input", setGradient);
+	let inputColor1 = document.querySelector(".color1");
+	let inputColor2 = document.querySelector(".color2");
+	inputColor1.addEventListener("input", setGradient);
+	inputColor2.addEventListener("input", setGradient);
 
 	let randomColors_button = document.querySelector(".generateTwoRandomColors");
 	randomColors_button.addEventListener("click", randomizeColorSelection);
